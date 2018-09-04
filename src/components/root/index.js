@@ -4,6 +4,7 @@ import {Provider} from 'react-redux'
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom'
 import baseStyles from './base-styles'
 import PrivateRoute from '../private-route'
+import Container from '../../components/common/container'
 import Home from '../../views/home'
 
 const Root = ({store}) => {
@@ -12,9 +13,11 @@ const Root = ({store}) => {
     <Provider store={store}>
       <Router>
         <div>
-          <Switch>
-            <Route exact path="/" component={Home}/>
-          </Switch>
+          <Container>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+            </Switch>
+          </Container>
         </div>
       </Router>
     </Provider>)
