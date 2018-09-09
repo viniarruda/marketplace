@@ -6,7 +6,7 @@ const UnloggedMenu = (props) => (
   <Fragment>
     <NavLink to='/cadastro'>Cadastrar</NavLink>
     {/*<NavLink to='/login'>Login</NavLink>*/}
-    <Button primary default onClick={props.login}>Login</Button>
+    <Button secondary default onClick={props.login}>Login</Button>
   </Fragment>
 )
 

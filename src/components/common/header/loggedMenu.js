@@ -8,6 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem/MenuItem";
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import Cart from '@material-ui/icons/ShoppingCart'
 
 
 class LoggedMenu extends Component {
@@ -38,6 +39,11 @@ class LoggedMenu extends Component {
         <IconButton color="inherit">
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
+          </Badge>
+        </IconButton>
+        <IconButton color="inherit">
+          <Badge badgeContent={0} color="secondary">
+            <Cart/>
           </Badge>
         </IconButton>
         <IconButton

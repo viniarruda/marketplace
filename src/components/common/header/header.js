@@ -11,20 +11,30 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import Navbar from './navbar';
+import DefaultMenu from './defaultMenu';
+import Search from './search';
 import LoggedMenu from './loggedMenu';
 import UnloggedMenu from './unloggedMenu';
 import colors from '../mixins/colors';
+import breakpoints from '../mixins/breakpoints';
 
 
 const NavAppBar = styled(AppBar)`
-  background-color: ${colors.primary};
-  color: ${colors.tertiary};
+  background-color: ${colors.primary}!important;
+  color: ${colors.tertiary}!important;
 `;
 
 const NavTitle = styled(Typography)`
   flex-grow: 1;
 `;
 
+const MenuMobile = styled(IconButton)`
+  display: none;
+ 
+  @media (max-width: ${breakpoints.small}) {
+    display: inline-flex;
+  }
+`;
 
 class Header extends Component {
 
@@ -35,12 +45,14 @@ class Header extends Component {
       <Navbar>
         <NavAppBar position='static'>
           <Toolbar>
-            <IconButton color="inherit" aria-label="Menu">
+            <MenuMobile color="inherit" aria-label="Menu">
               <MenuIcon />
-            </IconButton>
+            </MenuMobile>
             <NavTitle variant="title" color="inherit">
-              Title
+              MarketPlace
             </NavTitle>
+            <Search />
+            <DefaultMenu/>
             {
               auth.logged ?
                 <LoggedMenu logout={logout} /> : <UnloggedMenu login={login} />

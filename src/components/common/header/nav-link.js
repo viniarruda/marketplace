@@ -14,7 +14,7 @@ const NavLink = styled(Link)`
       text-transform: none;
     }
     &:hover {
-      color: ${colors.primary};
+      color: ${colors.secondaryLight};
     }
 `;
 

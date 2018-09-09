@@ -1,9 +1,9 @@
 const colors = {
-  primary:        '#69D2E7',
-  primaryLight:   '#A7DBD8',
-  secondary:      '#FA6900',
-  secondaryLight: '#F38630',
-  tertiary:       '#E0E4CC',
+  primary:        '#00A8C6',
+  primaryLight:   '#40C0CB',
+  secondary:      '#8FBE00',
+  secondaryLight: '#AEE239',
+  tertiary:       '#F9F2E7',
   default:        '#fff',
   invert:         '#000',
 }
