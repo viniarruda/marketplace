@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import promiseMiddleware from 'redux-promise-middleware'
 import Reducers from './store/reducers'
-import Root from './components/root'
+import Root from './routes/root'
 
 import registerServiceWorker from './registerServiceWorker'
 

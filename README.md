@@ -3,10 +3,12 @@
 This project use:
 - React
 - Redux
-- Router
+- Redux-Form
+- Redux-Thunk
+- React-Router
 - Protected routes
-- Thunk
 - Styled-Component
+- Material-Ui
 
 
 ## Run the project

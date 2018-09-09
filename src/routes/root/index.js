@@ -1,24 +1,26 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom'
 import baseStyles from './base-styles'
-import PrivateRoute from '../private-route'
-import Container from '../../components/common/container'
-import Home from '../../views/home'
+import PrivateRoute from '../private-route/index'
+import Content from '../../components/common/content'
+import Home from '../../views/home/index'
+import Header from '../../components/common/header/header'
 
 const Root = ({store}) => {
   baseStyles();
   return (
     <Provider store={store}>
       <Router>
-        <div>
-          <Container>
+        <Fragment>
+          <Header/>
+          <Content>
             <Switch>
               <Route exact path="/" component={Home}/>
             </Switch>
-          </Container>
-        </div>
+          </Content>
+        </Fragment>
       </Router>
     </Provider>)
 };
